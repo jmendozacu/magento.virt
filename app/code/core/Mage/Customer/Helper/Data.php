@@ -227,6 +227,11 @@ class Mage_Customer_Helper_Data extends Mage_Core_Helper_Abstract
         return $this->_getUrl('customer/account/logout');
     }
 
+    public function getAboutUsUrl()
+    {
+        return $this->_getUrl('about-magento-demo-store');
+    }
+
     /**
      * Retrieve customer dashboard url
      *
