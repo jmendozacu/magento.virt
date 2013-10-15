@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widgets>
+    <news_widget type="news/widget" module="news">
+        <name>News</name>
+        <description>Displays latests news</description>
+        <parameters>
+            <title translate="label">
+                <label>Title Text</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>Latests News</value>
+            </title>
+            <format translate="label">
+                <label>Number of News</label>
+                <visible>1</visible>
+                <type>select</type>
+                <value>2</value>
+                <values>
+                    <one_format translate="label">
+                        <value>1</value>
+                        <label>One News</label>
+                    </one_format>
+                    <two_format translate="label">
+                        <value>2</value>
+                        <label>Two News</label>
+                    </two_format>
+                    <three_format translate="label">
+                        <value>3</value>
+                        <label>Three News</label>
+                    </three_format>
+                </values>
+            </format>
+            <template translate="label">
+                <label>Template</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>news/wnews.phtml</value>
+            </template>
+        </parameters>
+    </news_widget>
+</widgets>

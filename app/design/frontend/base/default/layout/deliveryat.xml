@@ -1,0 +1,23 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+    <checkout_onepage_index>
+        <reference name="checkout.onepage.shipping">
+            <action method="setTemplate"><template>ism/shipping.phtml</template></action>
+        </reference>
+    </checkout_onepage_index>
+    <sales_order_view>
+        <reference name="my.account.wrapper">
+            <block type="deliveryat/order" name="deliveryat.order" template="ism/sales/order/order.phtml" after='sales.order.info' />
+        </reference>
+        <reference name="sales.order.info">
+            <action method="setTemplate"><template>ism/sales/order/info.phtml</template></action>
+        </reference>
+    </sales_order_view>
+<default>
+    <reference name="head">
+        <action method="addItem"><type>js</type><name>jquery-ui-1.10.3/jquery-1.9.1.js</name></action>
+        <action method="addItem"><type>js</type><name>jquery-ui-1.10.3/ui/jquery-ui.js</name></action>
+        <action method="addItem"><type>js_css</type><name>jquery-ui-1.10.3/themes/redmond/jquery-ui.css</name></action>
+    </reference>
+</default>
+</layout>   

@@ -1,0 +1,15 @@
+<div class="col-set order-info-box">
+    <div class="col">
+        <div class="box">
+            <div class="box-title">
+                <h2><?php echo $this->__('Delivery at:') ?></h2>
+            </div>
+            <div class="box-content">
+                <?php
+                    $deliveryat = $this->getDeliveryAt();
+                ?>
+                    <?php echo $deliveryat;?>
+            </div>
+        </div>
+    </div>
+</div>

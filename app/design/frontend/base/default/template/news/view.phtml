@@ -1,0 +1,39 @@
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php $_datasets = $this->getDatasets(); ?>
+<div class="page-head">
+    <h3><a href="<?php echo Mage::helper('news')->getListNewsUrl(); ?>">
+        <?php echo $this->__('News'); ?></a></h3>
+</div>
+
+<?php $item = $this->getNews(); ?>
+<h3><?php echo $item['ism_title']; ?></h3>
+<div>
+    <?php echo $item['ism_content']; ?>
+</div>
+<!--
+<?php echo $this->getPagerHtml(); ?>
+<?php if($_datasets->getSize()): ?>
+<table cellspacing="0" class="data-table" id="data-table">
+    <tbody>
+        <?php foreach ($_datasets as $_dataset): ?>
+            <tr>
+            <td  valign="middle"   style="vertical-align:middle;">
+                <h3><?php echo $_dataset->getData('ism_title') ?></h3>
+            </td>
+            </tr>
+            <tr>
+            <td  valign="middle"   style="vertical-align:middle;">
+                <?php echo $_dataset->getData('ism_anounce') ?>
+                <a href="<?php echo Mage::helper('news')->getNewsUrl($_dataset->getData('ism_id')); ?>">
+                    <?php echo $this->__('read more') ?></a>
+            </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<script type="text/javascript">decorateTable('data-table')</script>
+<?php echo $this->getPagerHtml(); ?>
+<?php else: ?>
+    <p><?php echo $this->__('You have submited no data.'); ?></p>
+<?php endif ?>
+-->

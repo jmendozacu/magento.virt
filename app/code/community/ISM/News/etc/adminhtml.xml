@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <menu>
+        <news translate="title" module="news">
+            <title>News</title>
+            <sort_order>100</sort_order>
+            <children>
+                <news translate="title" module="news">
+                    <title>Manage News</title>
+                    <sort_order>0</sort_order>
+                    <action>news/adminhtml_news</action>
+                </news>
+            </children>
+        </news>
+        <cms>
+            <children>
+                <news translate="title" module="news">
+                    <title>Manage News</title>
+                    <sort_order>0</sort_order>
+                    <action>news/adminhtml_news</action>
+                </news>
+            </children>
+        </cms>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <cms>
+                        <children>
+                            <news translate="title" module="news">
+                                <title>Manage News</title>
+                                <sort_order>0</sort_order>
+                            </news>
+                        </children>
+                    </cms>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,32 @@
+<?php $_datasets = $this->getDatasets(); ?>
+<div class="page-head">
+    <h3><a href="<?php echo Mage::helper('news')->getListNewsUrl(); ?>">
+        <?php echo $this->_title; ?></a></h3>
+</div>
+
+<?php if($_datasets->getSize()): ?>
+<table cellspacing="0" class="data-table" id="data-table">
+    <tbody>
+        <?php $i = 1; ?>
+        <?php foreach ($_datasets as $_dataset): ?>
+            <tr>
+            <td  valign="middle"   style="vertical-align:middle;">
+                <h3><?php echo $_dataset->getData('ism_title') ?></h3>
+            </td>
+            </tr>
+            <tr>
+            <td  valign="middle"   style="vertical-align:middle;">
+                <?php echo $_dataset->getData('ism_anounce') ?>
+                <a href="<?php echo Mage::helper('news')->getNewsUrl($_dataset->getData('ism_id')); ?>">
+                    <?php echo $this->__('read more') ?></a>
+            </td>
+            </tr>
+            <?php $i++; ?>
+            <?php if ($i > $this->_max) break;?>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<script type="text/javascript">decorateTable('data-table')</script>
+<?php else: ?>
+    <p><?php echo $this->__('You have submited no data.'); ?></p>
+<?php endif ?>
